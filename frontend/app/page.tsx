@@ -1,11 +1,11 @@
 import React from "react";
 
-import Header from "@/app/components/_Header/Header"
+import Navbar from "@/components/Navbar/Navbar"
 
-export default function Index() {
+export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <Header/>
+    <main className="flex w-full flex-col justify-between overflow-x-scroll">
+        <Navbar/>
     </main>
   );
 }
