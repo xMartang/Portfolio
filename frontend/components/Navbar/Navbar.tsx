@@ -13,7 +13,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="flex justify-between p-4">
+        <nav className="flex fixed top-0 w-full justify-between p-4 bg-gradient-to-b from-transparent to-white to-50%dark:from-transparent dark:from-10% dark:to-black dark:to-50%">
             <NavbarItems navbarId={NavbarId}/>
             
             <NavbarHeader mainTitle={navbarHeaderConfig.mainTitle} subTitle={navbarHeaderConfig.subTitle}/>

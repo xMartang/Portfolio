@@ -1,7 +1,7 @@
 import { useState} from "react"
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { CgClose } from "react-icons/cg";
+import { GoSidebarCollapse } from "react-icons/go";
 
 import { navbarItemsConfig } from "@/config/NavbarConfig";
 
@@ -10,9 +10,11 @@ interface NavbarItemsProps {
     navbarId?: string
 }
 
-const generalItemClassName = "block py-2 px-3 md:p-1 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:hover:text-white transition-all duration-150"
-const defaultItemClassName = generalItemClassName
-const clickedItemClassName = generalItemClassName + " font-bold border-b-2 border-black dark:border-white"
+const DEFAULT_MENU_HEIGHT = 28;
+
+const GENERAL_ITEM_CLASS_NAME = "block py-2 px-3 md:p-1 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:hover:text-white transition-all duration-150"
+const DEFAULT_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME
+const CLICKED_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME + " font-bold border-b-2 border-black dark:border-white"
 
 const NavbarItems: React.FC<NavbarItemsProps> = ({
     navbarId
@@ -25,7 +27,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({
 
         return (
             <li key={currItemName}>
-                <a onClick={() => setClickedItem(currItemName)} href={navbarItem.href} id={currItemName} className={clickedItemName == currItemName ? clickedItemClassName : defaultItemClassName}>
+                <a onClick={() => setClickedItem(currItemName)} href={navbarItem.href} id={currItemName} className={clickedItemName == currItemName ? CLICKED_ITEM_CLASS_NAME : DEFAULT_ITEM_CLASS_NAME}>
                     {currItemName}
                 </a>
             </li>
@@ -42,23 +44,21 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({
             </div>
 
             {/* Mobile Navigation Menu */}
-            <div className="flex max-lg:block cursor-pointer order-last" onClick={() => {setIsMenuOpen(!isMenuOpen);}}>
-                    <RxHamburgerMenu className="text-4xl md:hidden" />
-            </div>
+            <div className="flex flex-col max-lg:block order-last">
+                    <RxHamburgerMenu size={42} className="md:hidden cursor-pointer" onClick={() => {setIsMenuOpen(!isMenuOpen);}}>
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </RxHamburgerMenu>
 
-            {/* Mobile Navigation*/}
-            
-            <div className={
-                isMenuOpen
-                    ? 'fixed md:hidden right-0 top-0 w-[30%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
-                    : 'ease-in-out w-[30%] duration-500 fixed top-0 bottom-0 right-[-100%]'
-                }>
-                
-                <CgClose size={30} name="close-outline" className='mobile-nav-icon close-outline cursor-pointer mt-2 ml-2' onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
+                    {/* Mobile Navigation*/}
+                    <div className={
+                        `bg-white dark:bg-black '
+                        ${isMenuOpen ? 'fixed md:hidden right-0 w-[30%] h-full border-r border-r-gray-900 ease-in-out duration-500' : 'ease-in-out h-full w-[30%] duration-500 fixed right-[-100%]'}`}
+                        >
 
-                <ul className="text-center mt-2">
-                    {navbarItems}
-                </ul>
+                        <ul className="text-center mt-2">
+                            {navbarItems}
+                        </ul>
+                    </div>
             </div>
         </>
     );
