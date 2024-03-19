@@ -6,7 +6,7 @@ import { navbarItemsConfig } from "@/config/NavbarConfig";
 
 const GENERAL_ITEM_CLASS_NAME = "block py-2 px-3 md:p-2 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:hover:text-white transition-all duration-300"
 const DEFAULT_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME
-const CLICKED_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME + " font-bold bg-zinc-200 dark:bg-zinc-700 md:bg-inherit md:dark:bg-inherit md:border-b-2"
+const CLICKED_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME + " font-bold bg-zinc-300 dark:bg-zinc-700 md:bg-inherit md:dark:bg-inherit md:border-b-2 border-b-black dark:border-b-white"
 
 const NavbarItems = () => {
     const [clickedItemName, setClickedItem] = useState("");
