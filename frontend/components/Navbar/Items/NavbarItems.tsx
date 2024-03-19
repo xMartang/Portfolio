@@ -1,25 +1,15 @@
 import { useState} from "react"
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { GoSidebarCollapse } from "react-icons/go";
 
 import { navbarItemsConfig } from "@/config/NavbarConfig";
 
-
-interface NavbarItemsProps {
-    navbarId?: string
-}
-
-const DEFAULT_MENU_HEIGHT = 28;
-
-const GENERAL_ITEM_CLASS_NAME = "block py-2 px-3 md:p-1 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:hover:text-white transition-all duration-150"
+const GENERAL_ITEM_CLASS_NAME = "block py-2 px-3 md:p-2 md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:hover:text-white transition-all duration-300"
 const DEFAULT_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME
-const CLICKED_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME + " font-bold border-b-2 border-black dark:border-white"
+const CLICKED_ITEM_CLASS_NAME = GENERAL_ITEM_CLASS_NAME + " font-bold bg-zinc-200 dark:bg-zinc-700 md:bg-inherit md:dark:bg-inherit md:border-b-2"
 
-const NavbarItems: React.FC<NavbarItemsProps> = ({
-    navbarId
-}) => {
-    const [clickedItemName, setClickedItem] = useState(navbarItemsConfig[0].name);
+const NavbarItems = () => {
+    const [clickedItemName, setClickedItem] = useState("");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     let navbarItems = navbarItemsConfig.map(function(navbarItem) {
@@ -37,28 +27,25 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({
     return (
         <>        
             {/* Desktop Navigation */}
-            <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id={navbarId}>
-                <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+            <div className="mx-auto items-center hidden md:flex md:order-1">
+                <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0">
                     {navbarItems}
                 </ul>
             </div>
 
-            {/* Mobile Navigation Menu */}
-            <div className="flex flex-col max-lg:block order-last">
-                    <RxHamburgerMenu size={42} className="md:hidden cursor-pointer" onClick={() => {setIsMenuOpen(!isMenuOpen);}}>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </RxHamburgerMenu>
+            {/* Mobile Navigation*/}
+            <div className="flex h-full justify-around max-lg:block order-last md:hidden">
+                <RxHamburgerMenu size={42} className="cursor-pointer h-full flex-1" onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
 
-                    {/* Mobile Navigation*/}
-                    <div className={
-                        `bg-white dark:bg-black '
-                        ${isMenuOpen ? 'fixed md:hidden right-0 w-[30%] h-full border-r border-r-gray-900 ease-in-out duration-500' : 'ease-in-out h-full w-[30%] duration-500 fixed right-[-100%]'}`}
-                        >
+                <div className={
+                    `bg-white dark:bg-black border-black dark:border-white fixed w-[40%] max-h-screen duration-500 ease-in-out border-b-2 border-l-2 md:hidden mt-4 overflow-y-auto '
+                    ${isMenuOpen ? 'right-0' : 'right-[-100%]'}`}
+                    >
 
-                        <ul className="text-center mt-2">
-                            {navbarItems}
-                        </ul>
-                    </div>
+                    <ul className="flex-col text-center justify-around items-center space-y-2">
+                        {navbarItems}
+                    </ul>
+                </div>
             </div>
         </>
     );

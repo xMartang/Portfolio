@@ -9,13 +9,9 @@ const NavbarHeader: React.FC<NavbarHeaderProps> = ({
     mainTitle, subTitle
 }) => {
     return (
-        <div className="flex flex-col items-center justify-center">
-            <>
-                <Heading class="text-3xl font-semibold dark:text-white" level="h2" text={mainTitle} bold={true}/>
-            </>
-            <>
-                <Heading level="h2" text={subTitle} bold={false}/>
-            </>
+        <div className="flex flex-col items-center justify-center mx-auto md:w-max-[80%]">
+            <Heading class="text-3xl font-semibold dark:text-white" level="h1" text={mainTitle} bold={true}/>
+            <Heading level="h2" text={subTitle} bold={false}/>
         </div>
     );
 }
