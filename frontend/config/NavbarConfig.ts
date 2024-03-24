@@ -1,7 +1,13 @@
 
+export const navbarGeneralConfig = {
+    navbarHeight: "150px"
+}
+
 export const navbarHeaderConfig = {
     mainTitle: "Matan Afriat",
-    subTitle: "Software Developer"
+    subTitle: "Software Developer",
+    photo: "/images/me.jpeg",
+    photoSize: "120px"
 }
 
 export const navbarItemsConfig = [

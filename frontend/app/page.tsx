@@ -5,12 +5,12 @@ import About from "@/components/About/About"
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-screen justify-between text-black dark:text-white">
+    <main className="flex flex-col h-screen text-black dark:text-white">
         <Navbar/>
 
-        <div className="bg-white dark:bg-black angled-bottom flex min-h-screen flex-col gap-3">
-          <About/>
-      </div>
+        <div className="flex flex-col bg-zinc-200 dark:bg-zinc-950 min-h-screen gap-3 overflow-y-auto">
+            <About/>
+        </div>
     </main>
   );
 }
