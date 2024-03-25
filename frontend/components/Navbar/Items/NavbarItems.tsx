@@ -12,12 +12,12 @@ const NavbarItems = () => {
     const [clickedItemName, setClickedItem] = useState("");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    let navbarItems = navbarItemsConfig.map(function(navbarItem) {
+    let navbarItems = Object.values(navbarItemsConfig).map(function(navbarItem) {
         let currItemName = navbarItem.name
 
         return (
             <li key={currItemName}>
-                <a onClick={() => setClickedItem(currItemName)} href={navbarItem.href} id={currItemName} className={clickedItemName == currItemName ? CLICKED_ITEM_CLASS_NAME : DEFAULT_ITEM_CLASS_NAME}>
+                <a onClick={() => setClickedItem(currItemName)} href={"#" + navbarItem.id} id={currItemName} className={clickedItemName == currItemName ? CLICKED_ITEM_CLASS_NAME : DEFAULT_ITEM_CLASS_NAME}>
                     {currItemName}
                 </a>
             </li>
@@ -38,7 +38,9 @@ const NavbarItems = () => {
                 <RxHamburgerMenu size={42} className="cursor-pointer h-auto w-auto flex-1 hover:bg-zinc-300 hover:dark:bg-zinc-700 p-1 rounded" onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
             </div>
 
-            <div className={`fixed w-full h-full top-0 bg-opacity-70 bg-black transition-opacity duration-500 ${isMenuOpen ? 'right-0' : 'right-[-100%] hidden'}`}/>
+
+            {/* Darken background when menu is opened */}
+            <div className={`fixed lg:hidden w-full h-full top-0 bg-opacity-70 bg-black transition-opacity duration-500 ${isMenuOpen ? 'right-0' : 'right-[-100%] hidden'}`} onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
 
             {/* Menu Navigation */}
             <div className={

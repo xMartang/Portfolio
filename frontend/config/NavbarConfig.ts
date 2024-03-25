@@ -7,28 +7,28 @@ export const navbarHeaderConfig = {
     mainTitle: "Matan Afriat",
     subTitle: "Software Developer",
     photo: "/images/me.jpeg",
-    photoSize: "120px"
+    photoSize: "150px"
 }
 
-export const navbarItemsConfig = [
-    {
+export const navbarItemsConfig = {
+    about: {
         name: "About",
-        href: "#"
+        id: "about"
     },
-    {
+    skills: {
         name: "Skills",
-        href: "#"
+        id: "skills"
     },
-    {
+    experience: {
         name: "Experience",
-        href: "#"
+        id: "experience"
     },
-    {
+    projects: {
         name: "Projects",
-        href: "#"
+        id: "projects"
     },
-    {
+    contact: {
         name: "Contact",
-        href: "#"
+        id: "contact"
     },
-]
+}

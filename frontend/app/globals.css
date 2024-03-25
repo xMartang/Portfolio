@@ -20,6 +20,13 @@
   }
 }
 
+/**
+ * Smooth scrolling on the whole document
+ */
+ html {
+  scroll-behavior: smooth;
+}
+
 nav {
   color: rgb(var(--nav-foreground-rgb));
   background: rgb(var(--nav-background-rgb));
