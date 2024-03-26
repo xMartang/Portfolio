@@ -38,9 +38,8 @@ const NavbarItems = () => {
                 <RxHamburgerMenu size={42} className="cursor-pointer h-auto w-auto flex-1 hover:bg-zinc-300 hover:dark:bg-zinc-700 p-1 rounded" onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
             </div>
 
-
             {/* Darken background when menu is opened */}
-            <div className={`fixed lg:hidden w-full h-full top-0 bg-opacity-70 bg-black transition-opacity duration-500 ${isMenuOpen ? 'right-0' : 'right-[-100%] hidden'}`} onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
+            <div className={`fixed lg:hidden h-[100%] w-[100%] top-0 bg-opacity-70 bg-black transition-opacity duration-500 order-last ${isMenuOpen ? 'right-0' : 'right-[-100%] hidden'}`} onClick={() => {setIsMenuOpen(!isMenuOpen);}}/>
 
             {/* Menu Navigation */}
             <div className={

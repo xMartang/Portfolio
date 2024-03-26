@@ -19,10 +19,6 @@ export const navbarItemsConfig = {
         name: "Skills",
         id: "skills"
     },
-    experience: {
-        name: "Experience",
-        id: "experience"
-    },
     projects: {
         name: "Projects",
         id: "projects"
