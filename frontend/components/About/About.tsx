@@ -11,7 +11,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = (props) => {
     return (
-        <div id={props.hrefId} className="flex grow flex-col mt-4">
+        <div id={props.hrefId} className="flex grow flex-col min-h-screen justify-center">
             <div className="container mx-auto flex flex-row flex-wrap pl-[5%] pb-3 align-middle">
                 <div className="my-auto flex w-full flex-col gap-3 whitespace-pre-line">
                     <p className="text-7xl font-light">{aboutInfo.title}</p>

@@ -1,18 +1,19 @@
-import React from "react"
-import Image from "next/image"
-
 import Navbar from "@/components/Navbar/Navbar"
 import About from "@/components/About/About"
+import Skills from "@/components/Skills/Skills"
 
-import { navbarItemsConfig } from "@/config/NavbarConfig"
+import { navbarItemsConfig } from "@/config/NavbarConfig";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen text-black dark:text-white">
-        <Navbar/>
-
-        <div className="flex flex-col bg-zinc-200 dark:bg-zinc-950 min-h-screen gap-3 overflow-y-auto">
-            <About/>
+    <main className="flex flex-col justify-between h-screen text-black dark:text-white">
+        <div className="z-50">
+          <Navbar/>
+        </div>
+            
+        <div className="flex flex-col justify-between bg-zinc-200 dark:bg-zinc-950 min-h-screen gap-3 overflow-y-auto z-0">
+            <About hrefId={navbarItemsConfig.about.id}/>
+            <Skills hrefId={navbarItemsConfig.skills.id}/>
         </div>
     </main>
   );
