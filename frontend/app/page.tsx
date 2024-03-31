@@ -11,7 +11,7 @@ export default function Home() {
           <Navbar/>
         </div>
             
-        <div className="flex flex-col justify-between bg-zinc-200 dark:bg-zinc-950 min-h-screen gap-3 overflow-y-auto z-0">
+        <div className="flex flex-col justify-between bg-zinc-200 dark:bg-zinc-950 gap-3 overflow-y-auto z-0">
             <About hrefId={navbarItemsConfig.about.id}/>
             <Skills hrefId={navbarItemsConfig.skills.id}/>
         </div>

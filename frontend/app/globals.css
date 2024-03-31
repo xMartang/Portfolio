@@ -20,6 +20,10 @@
   }
 }
 
+.swiper-pagination-bullet-active {
+  background: red;
+}
+
 /**
  * Smooth scrolling on the whole document
  */

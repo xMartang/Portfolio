@@ -7,21 +7,29 @@ import { Pagination } from 'swiper/modules';
 
 import SkillsCard from '../SkillsCard/SkillsCard';
 
-import { frontendSkills, backendSkills } from '@/config/SkillsConfig';
+import { codingLanguages, frontendDevelopment, backendDevelopment, developmentCycle } from '@/config/SkillsConfig';
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 
+
 const allSkills = [
   {
+    header: "Languages",
+    list: codingLanguages,
+  },
+  {
     header: "Frontend",
-    list: frontendSkills,
+    list: frontendDevelopment,
   },
   {
     header: "Backend",
-    list: backendSkills,
+    list: backendDevelopment,
   },
-  
+  {
+    header: "Development Cycle",
+    list: developmentCycle,
+  },
 ];
 
 export default function SkillsSwiper() {
@@ -33,9 +41,9 @@ export default function SkillsSwiper() {
                 spaceBetween={30}
                 pagination={{
                   dynamicBullets: false,
+                  clickable: true
                 }}
                 style={{
-                  "--swiper-pagination-color": "#ffb500",
                   "--swiper-pagination-bullet-inactive-color": "#999999",
                   "--swiper-pagination-bullet-inactive-opacity": "1",
                   "--swiper-pagination-bullet-size": "10px",
@@ -46,7 +54,7 @@ export default function SkillsSwiper() {
                 return (
                 <SwiperSlide className="p-4 text-center h-full grow" key={index}>
                     <h1 className="text-2xl font-light border-b-2 border-black dark:border-white">{currentSkills.header}</h1>
-                    <SkillsCard className="p-2" skills={currentSkills.list}/>
+                    <SkillsCard className="p-2 pb-8" skills={currentSkills.list}/>
                 </SwiperSlide>
                 );
             })}
