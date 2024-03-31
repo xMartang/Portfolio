@@ -9,5 +9,11 @@ export const aboutInfo = {
 
 
 export const aboutLinks = {
-    resumeLink: "/documents/MatanAfriat-Resume.pdf"
+    resume: "/documents/MatanAfriat-Resume.pdf",
+    social: {
+        facebook: "https://www.facebook.com/matan.afriat",
+        instagram: "https://www.instagram.com/matan.af/",
+        github: "https://github.com/xMartang",
+        linkedin: "https://www.linkedin.com/in/matan-afriat-22477a24b/"
+    }
 }

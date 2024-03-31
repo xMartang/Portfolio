@@ -23,8 +23,4 @@ export const navbarItemsConfig = {
         name: "Projects",
         id: "projects"
     },
-    contact: {
-        name: "Contact",
-        id: "contact"
-    },
 }

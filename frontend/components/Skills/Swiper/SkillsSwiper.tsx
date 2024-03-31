@@ -34,7 +34,7 @@ export default function SkillsSwiper() {
             >
             {content.map((p, index) => {
                 return (
-                <SwiperSlide className="border-2 p-7 pb-16" key={index}>
+                <SwiperSlide className="border-2 border-black dark:border-white p-7 pb-16" key={index}>
                     <h1 className="font-bold">{p.header}</h1>
                     <p>{p.info}</p>
                 </SwiperSlide>
