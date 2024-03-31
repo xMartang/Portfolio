@@ -5,38 +5,48 @@ import * as React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import SkillsCard from '../SkillsCard/SkillsCard';
 
-const content = [
+import { frontendSkills, backendSkills } from '@/config/SkillsConfig';
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+
+const allSkills = [
   {
-    header: 'Title01',
-    info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim quidem ipsum quos corrupti totam ullam nam, amet, quam dolores saepe assumenda adipisci tenetur, sunt minima et porro unde excepturi?',
+    header: "Frontend",
+    list: frontendSkills,
   },
   {
-    header: 'Title02',
-    info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim quidem ipsum quos corrupti totam ullam nam, amet, quam dolores saepe assumenda adipisci tenetur, sunt minima et porro unde excepturi?',
+    header: "Backend",
+    list: backendSkills,
   },
-  {
-    header: 'Title03',
-    info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim quidem ipsum quos corrupti totam ullam nam, amet, quam dolores saepe assumenda adipisci tenetur, sunt minima et porro unde excepturi?',
-  },
+  
 ];
 
 export default function SkillsSwiper() {
     return (
-        <div className="flex flex-wrap items-center justify-between md:grid-cols-2 x-md:grid-rows-2 gap-y-16 md:gap-x-10">
+        <div className="flex flex-wrap items-center justify-between md:grid-cols-2 x-md:grid-rows-2 gap-y-16 md:gap-x-10 border-2 border-black dark:border-white rounded bg-neutral-300 dark:bg-neutral-900">
             <Swiper
                 modules={[Pagination]}
                 loop={true}
                 spaceBetween={30}
+                pagination={{
+                  dynamicBullets: false,
+                }}
+                style={{
+                  "--swiper-pagination-color": "#ffb500",
+                  "--swiper-pagination-bullet-inactive-color": "#999999",
+                  "--swiper-pagination-bullet-inactive-opacity": "1",
+                  "--swiper-pagination-bullet-size": "10px",
+                  "--swiper-pagination-bullet-horizontal-gap": "6px"
+                }}
             >
-            {content.map((p, index) => {
+            {allSkills.map((currentSkills, index) => {
                 return (
-                <SwiperSlide className="border-2 border-black dark:border-white p-7 pb-16" key={index}>
-                    <h1 className="font-bold">{p.header}</h1>
-                    <p>{p.info}</p>
+                <SwiperSlide className="p-4 text-center h-full grow" key={index}>
+                    <h1 className="text-2xl font-light border-b-2 border-black dark:border-white">{currentSkills.header}</h1>
+                    <SkillsCard className="p-2" skills={currentSkills.list}/>
                 </SwiperSlide>
                 );
             })}
