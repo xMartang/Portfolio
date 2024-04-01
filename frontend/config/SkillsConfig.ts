@@ -1,10 +1,6 @@
 
-export type SkillType = {
-    name: string;
-    icon: string;
-}
 
-export const codingLanguages: SkillType[] = [
+export const codingLanguages = [
     {
         name: "Python",
         icon: "/icons/skills/languages/python.svg",
@@ -27,7 +23,7 @@ export const codingLanguages: SkillType[] = [
     },
 ];
 
-export const frontendDevelopment: SkillType[] = [
+export const frontendDevelopment = [
     {
         name: "CSS",
         icon: "/icons/skills/frontend/css.svg",
@@ -50,7 +46,7 @@ export const frontendDevelopment: SkillType[] = [
     },
 ];
 
-export const backendDevelopment: SkillType[] = [
+export const backendDevelopment = [
     {
         name: "Node.js",
         icon: "/icons/skills/backend/nodejs.svg",
@@ -85,7 +81,7 @@ export const backendDevelopment: SkillType[] = [
     },
 ]
 
-export const developmentCycle: SkillType[] = [
+export const developmentTools = [
     {
         name: "Git",
         icon: "/icons/skills/cycle/git.svg",

@@ -2,7 +2,10 @@ import { FunctionComponent } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from 'next/image'
 
-import { SkillType } from "@/config/SkillsConfig"
+export type SkillType = {
+  name: string;
+  icon: string;
+}
 
 interface SkillsCardProps {
   className?: string;
