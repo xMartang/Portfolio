@@ -19,8 +19,8 @@ export const navbarItemsConfig = {
         name: "Skills",
         id: "skills"
     },
-    projects: {
-        name: "Projects",
-        id: "projects"
+    career: {
+        name: "Career",
+        id: "career"
     },
 }

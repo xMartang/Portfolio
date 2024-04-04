@@ -9,17 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.1",
+    "@heroicons/react": "^2.1.3",
     "@material-tailwind/react": "^2.1.9",
+    "@merc/react-timeline": "^0.1.42",
+    "@nextui-org/card": "^2.0.24",
+    "@nextui-org/chip": "^2.0.25",
+    "@nextui-org/react": "^2.2.10",
+    "@nextui-org/system": "^2.0.15",
+    "@nextui-org/theme": "^2.1.18",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
+    "framer": "^2.4.1",
+    "framer-motion": "^11.0.24",
     "next": "14.1.3",
     "next-ui": "^0.9.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
     "react-typed": "^2.0.12",
-    "swiper": "^11.0.7"
+    "styled-components": "^6.1.8",
+    "swiper": "^11.0.7",
+    "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

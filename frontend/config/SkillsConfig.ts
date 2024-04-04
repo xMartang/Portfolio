@@ -10,6 +10,14 @@ export const codingLanguages = [
         icon: "/icons/skills/languages/java.svg",
     },
     {
+        name: "C++",
+        icon: "/icons/skills/languages/c++.svg",
+    },
+    {
+        name: "C#",
+        icon: "/icons/skills/languages/c-sharp.svg",
+    },
+    {
         name: "Typescript",
         icon: "/icons/skills/languages/typescript.svg",
     },
@@ -18,96 +26,85 @@ export const codingLanguages = [
         icon: "/icons/skills/languages/javascript.svg",
     },
     {
+        name: "CSS",
+        icon: "/icons/skills/languages/css.svg",
+    },
+    {
+        name: "HTML",
+        icon: "/icons/skills/languages/html.svg",
+    },
+    {
         name: "SQL",
         icon: "/icons/skills/languages/sql.svg",
     },
 ];
 
-export const frontendDevelopment = [
-    {
-        name: "CSS",
-        icon: "/icons/skills/frontend/css.svg",
-    },
-    {
-        name: "HTML",
-        icon: "/icons/skills/frontend/html.svg",
-    },
-    {
-        name: "React",
-        icon: "/icons/skills/frontend/react.svg",
-    },
-    {
-        name: "Next.js",
-        icon: "/icons/skills/frontend/nextjs.svg",
-    },
-    {
-        name: "Tailwind",
-        icon: "/icons/skills/frontend/tailwind.svg",
-    },
-];
-
-export const backendDevelopment = [
+export const webDevelopment = [
     {
         name: "Node.js",
-        icon: "/icons/skills/backend/nodejs.svg",
+        icon: "/icons/skills/web/nodejs.svg",
     },
     {
         name: "Django",
-        icon: "/icons/skills/backend/django.svg",
+        icon: "/icons/skills/web/django.svg",
     },
     {
         name: "Flask",
-        icon: "/icons/skills/backend/flask.svg",
-    },
-    {
-        name: "Fast API",
-        icon: "/icons/skills/backend/fastapi.svg",
-    },
-    {
-        name: "Rest API",
-        icon: "/icons/skills/backend/rest-api.svg",
+        icon: "/icons/skills/web/flask.svg",
     },
     {
         name: "MongoDB",
-        icon: "/icons/skills/backend/mongodb.svg",
+        icon: "/icons/skills/web/mongodb.svg",
     },
     {
         name: "MySQL",
-        icon: "/icons/skills/backend/mysql.svg",
+        icon: "/icons/skills/web/mysql.svg",
     },
     {
         name: "Express.js",
-        icon: "/icons/skills/backend/expressjs.svg",
+        icon: "/icons/skills/web/expressjs.svg",
+    },
+    {
+        name: "React",
+        icon: "/icons/skills/web/react.svg",
+    },
+    {
+        name: "Next.js",
+        icon: "/icons/skills/web/nextjs.svg",
+    },
+    {
+        name: "Tailwind",
+        icon: "/icons/skills/web/tailwind.svg",
     },
 ]
 
 export const developmentTools = [
     {
         name: "Git",
-        icon: "/icons/skills/cycle/git.svg",
+        icon: "/icons/skills/tools/git.svg",
     },
     {
         name: "Gitlab",
-        icon: "/icons/skills/cycle/gitlab.svg",
+        icon: "/icons/skills/tools/gitlab.svg",
     },
     {
         name: "CI/CD",
-        icon: "/icons/skills/cycle/ci-cd.svg",
+        icon: "/icons/skills/tools/ci-cd.svg",
     },
     {
         name: "Docker",
-        icon: "/icons/skills/cycle/docker.svg",
+        icon: "/icons/skills/tools/docker.svg",
     },
     {
         name: "VMWare",
-        icon: "/icons/skills/cycle/vmware.svg",
+        icon: "/icons/skills/tools/vmware.svg",
     },
     {
         name: "Apache NiFi",
-        icon: "/icons/skills/cycle/apache-nifi.svg",
+        icon: "/icons/skills/tools/apache-nifi.svg",
     },
     {
         name: "Nginx",
-        icon: "/icons/skills/cycle/nginx.svg",
+        icon: "/icons/skills/tools/nginx.svg",
     },
 ];

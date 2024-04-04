@@ -3,7 +3,7 @@
 import { Button } from "@material-tailwind/react"
 import { GrDocumentUser } from "react-icons/gr";
 
-import IconLinks, {iconLink} from "../../Common/icons/IconLinks";
+import IconLinks, {iconLink} from "@/components/common/ui/icons/IconLinks";
 
 import { aboutInfo, aboutLinks } from "@/config/AboutConfig";
 
@@ -36,12 +36,12 @@ const socialIcons: iconLink[] = [
 
 
 interface AboutProps {
-    hrefId?: string
+    hrefId: string
 }
 
 const About: React.FC<AboutProps> = (props) => {
     return (
-        <section id={props.hrefId} className="flex grow flex-col min-h-screen justify-center pt-24">
+        <section id={props.hrefId} className="flex grow flex-col min-h-screen justify-center">
             <div className="container mx-auto flex flex-row flex-wrap pl-[5%] pb-3 align-middle justify-center">
                 <div className="my-auto flex w-full flex-col gap-3 whitespace-pre-line md:max-w-[768px]">
                     <h1 className="text-7xl font-light">{aboutInfo.title}</h1>
