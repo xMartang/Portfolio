@@ -53,7 +53,7 @@ const About: React.FC<AboutProps> = (props) => {
                         <a href={aboutLinks.resume} download>
                             <Button 
                                 size="sm" 
-                                className="flex items-center text-sm font-light p-3 border-zinc-600 border-2 rounded-full bg-gradient-to-b from-zinc-500 via-zinc-200 to-zinc-400 dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 relative overflow-visible hover:-translate-y-1 px-12 shadow-lg shadow-zinc-800 bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0" 
+                                className="flex items-center text-sm font-semilight text-black dark:text-white p-3 border-zinc-600 border-2 rounded-full bg-gradient-to-b from-zinc-500 via-zinc-200 to-zinc-400 dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 relative overflow-visible hover:-translate-y-1 px-12 shadow-lg shadow-zinc-800 bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0" 
                                 placeholder="Resume"
                             >
                                 <GrDocumentUser className="ml-2 mr-2"/>
